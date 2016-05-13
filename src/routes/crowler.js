@@ -4,6 +4,12 @@ var request = require('request');
 var cheerio = require('cheerio');
 var crowlRouter = express.Router();
 
+crowlRouter.route('/')
+    .get(function (req, res) {
+        res.redirect('/crowl');
+    });
+
+
 crowlRouter.route('/crowl')
     .get(function (req, res) {
         try {

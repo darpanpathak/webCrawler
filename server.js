@@ -15,6 +15,10 @@ app.set('views', 'src/views');
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+app.get('*', function(req, res){
+  res.send('what???', 404);
+});
+
 var port = process.env.PORT || 4004;
 app.listen(port, function (err) {
     console.log("Server is running on : " + port);
